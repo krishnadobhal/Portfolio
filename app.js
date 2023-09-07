@@ -1,5 +1,6 @@
 const express=require("express")
 const bodyParser=require("body-parser")
+const path = require('path');
 
 const app=express()
 app.use(express.static("public"));
@@ -12,7 +13,7 @@ app.get("/",(req,res)=>{
 
 app.post("/",(req,res)=>{
     console.log("Done")
-    res.sendFile(__dirname+"/Success.html")
+    res.sendFile(path.join(__dirname, 'Success.html'));
 })
 
 const Port=process.env.PORT || 80
