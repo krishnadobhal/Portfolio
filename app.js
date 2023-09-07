@@ -10,8 +10,11 @@ app.get("/",(req,res)=>{
     res.sendFile(__dirname+"/index.html");
 })
 
-app.listen(80,()=>{console.log("Listening")})
-
 app.post("/",(req,res)=>{
     res.sendFile(__dirname+"/Success.html")
 })
+
+const Port=process.env.PORT || 80
+
+app.listen(Port,()=>{console.log("Listening")})
+
