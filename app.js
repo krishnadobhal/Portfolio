@@ -11,6 +11,7 @@ app.get("/",(req,res)=>{
 })
 
 app.post("/",(req,res)=>{
+    console.log("Done")
     res.sendFile(__dirname+"/Success.html")
 })
 
